@@ -1,4 +1,4 @@
-MSPforNN 
+NNforMSP 
 ================
 
 This repository contains Python code and data of the paper of Lepore, Palumbo and Sposito 
