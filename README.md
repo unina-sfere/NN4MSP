@@ -33,7 +33,7 @@ arranged appropriately as in the next section “Data preparation”.
 You can install the development version of the python package `NNforMSP` from GitHub with:
 
 ``` python
-pip install git+https://github.com/gianlucasposito/NNforMSP#egg=NNforMSP
+pip install git+https://github.com/unina-sfere/NNforMSP#egg=NNforMSP
 ```
 
 ## Neural Network training
