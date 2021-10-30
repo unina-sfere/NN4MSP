@@ -12,11 +12,11 @@ This repository contains the following files:
 
 -   HVAC_data.csv contains the HVAC data set
 -   NNforMSP/functions.py is the source code of the Python package `NNforMSP` 
--   NNforMSP_tutorial.ipynb contains the Jupyter Notebook performing all the analysis shown in
-    the Section *A real-case study* of the paper
+-   NNforMSP_tutorial.ipynb is the Jupyter Notebook performing all the analysis shown in
+    the Section "*A real-case study*" of the paper
 
 Moreover, in the following Section we provide a tutorial to show how to implement in Python 
-the proposed methodology used in the paper.
+the proposed methodology used in the paper to the real-case study.
 
 # Neural network based control charting for multiple stream processes with an application to HVAC systems in passenger railway vehicles
 
