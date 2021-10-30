@@ -40,6 +40,8 @@ pip install git+https://github.com/unina-sfere/NNforMSP#egg=NNforMSP
 
 # Import libraries
 
+# Import libraries
+
 import pandas as pd
 import numpy as np
 
@@ -163,9 +165,11 @@ f = ROC_AUC_plot(classifier, X_val, y_val, f, xlabel = 'False Positive Rate', yl
 
 <img src="README_Figure/ROC_AUC_plot.png" height = "60%"  width="60%"/>
 
-To allow fair comparison with the classical statistical control charting procedures, the cut-off value (CV) of the neuron in the output layer
+## Set the cut-off value of the neuron in the output layer
+
+To allow fair comparison with the traditional statistical control charting procedures, the cut-off value (CV) of the neuron in the output layer
 must be set and can be regarded as the key threshold to set the Type-I and Type-II errors.
-A table of the CVs of the proposed NNs corresponding to typical false alarm rate values is provided in the paper. Additionally using the function `set_cv_alpha` from the `MSPforNN` package, you can compute the Type-I error corresponding to any CV. 
+A table of the CVs of the proposed NN corresponding to typical false alarm rate values is provided in the paper. Additionally, using the function `set_cv_alpha` from the `MSPforNN` package, you can compute the Type-I error corresponding to any CV. 
 
 ``` python
 
@@ -178,11 +182,12 @@ print(alpha)
 
 ```
 
-0.0027, which is the default value for a Shewhart control chart in the 6-sigma quality approach.
+0.0027 \\
+which is the default value for a Shewhart control chart in the 6-sigma quality approach.
 
 ## Real-case study: HVAC systems in passenger railway vehicles 
 
-Import the HVAC dataset. Data are already cleaned to remove unsteady working conditions and sensor
+Import the HVAC datavset. Data have already been cleaned to remove unsteady working conditions and sensor
 measurement errors and validated by domain expert.
 
 ``` python
@@ -192,7 +197,7 @@ HVAC_data = pd.read_csv('HVAC_data.csv', parse_dates=['Timestamp'])
 ```
 ### Phase I 
 
-Filter `Vehicle` by Train_1 and consider 10 days of operational data from "07-27" to "08-08" for mean and variance estimation.
+Filter `Vehicle` by Train_1 and consider 10 days of operational data from "07-27" to "08-08" for mean and variance estimations.
 
 ``` python
 
@@ -202,12 +207,12 @@ train_1_data = train_1_data.loc[(train_1_data['Timestamp'] >= '07-27')
                      
 ```
 
-Select only the DeltaTemp variables and compute the mean every 5 rows   
+Select only the DeltaTemp variables and compute the mean every 5 rows.   
 
 ``` python
 
 train_1_data = train_1_data.iloc[:,-6:]
-train_1_data = train_1_data.to_numpy()
+train_1_data = train_1_data.to_numpy() # Convert pandas dataframe to NumPy array
 train_1_data_mean = train_1_data.transpose().reshape(-1,k).mean(1).reshape(s,-1).transpose() 
 
 ```
@@ -238,11 +243,12 @@ plt.show()
 
 <img src="README_Figure/plot_DeltaT_PhaseI_train_1.png" height = "100%"  width="100%"/>
 
-Compute the residuals for each coach and then calculate the mean and the variance.
+Compute the residuals from each train coach and then calculate the mean and the variance.
 
 ``` python
 
 train_1_residual = train_1_data_mean - np.mean(train_1_data_mean, axis = 1, keepdims= True) 
+
 mean_res = np.mean(train_1_residual)
 std_res = np.std(train_1_residual)
 
