@@ -268,7 +268,7 @@ train_2_data = train_2_data.iloc[0:-4,-6:] # Select the DeltaTemp variables
 train_2_data = train_2_data.to_numpy()
 train_2_data_mean = train_2_data.transpose().reshape(-1,k).mean(1).reshape(s,-1).transpose() # Average every 5 rows 
 
-# Plot
+# Plot the ΔT signals from the six train coaches 
 
 fig = plt.figure(figsize=(12, 6))
 
@@ -293,10 +293,12 @@ plt.show()
 
 <img src="README_Figure/plot_DeltaT_PhaseII_train_2.png" height = "100%"  width="100%"/>
 
-After computing and standardizing the residuals from each coach, the
-range of the subgroup means of the residuals and the overall mean at each sample time are calculated. 
+After computing and standardizing the residuals from each coach, the range of the subgroup means of
+the residuals and the overall mean at each sample time are calculated. 
 
 ``` python
+
+# Definton of the input vector
 
 train_2_residual = train_2_data_mean - np.mean(train_2_data_mean, axis = 1, keepdims= True)
 train_2_mean_std = (train_2_residual - mean_res)/std_res
@@ -305,7 +307,7 @@ sample_range = train_2_mean_std.max(axis=1) - train_2_mean_std.min(axis=1)
 train_2_mean_std = np.c_[train_2_mean_std,overall_mean,sample_range]
 
 ```
-Then the range, the overall mean and the six residuals for each coach are given as input to the NN.
+Then the input vector is given as input to the NN.
 
 ``` python
 
@@ -314,7 +316,8 @@ train_2_mean_std_pred = classifier.predict(train_2_mean_std)
 
 ```
 
-Finally, you can plot the control chart by calling the function `control_chart` from the `MSPforNN` package
+Finally, you can plot the control chart based on the NN predicted probability by calling the function 
+`control_chart` from the `MSPforNN` package.
 
 ``` python
 
