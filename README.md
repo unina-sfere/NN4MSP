@@ -30,13 +30,11 @@ contains the HVAC data set analyzed in the paper.
 Alternatively, one can use another data set that must be
 arranged appropriately as in the next section “Data preparation”.
 
-You can install the development version of the python package `NNforMSP` from GitHub with:
+You can install the development version of the Python package `NNforMSP` from GitHub with:
 
 ``` python
 pip install git+https://github.com/unina-sfere/NNforMSP#egg=NNforMSP
 ```
-
-## Neural Network training
 
 ``` python
 
@@ -61,7 +59,9 @@ from keras.layers import Dense
 from NNforMSP.functions import *
 
 ```
-Define the simulation parameters to properly generate the data set to train the NN.
+## Neural Network training
+
+Set the simulation parameters to properly generate the data set to train the Neaural Network (NN).
 
 ``` python
 
@@ -69,15 +69,15 @@ Define the simulation parameters to properly generate the data set to train the 
 
 s = 6 # number of streams
 k = 5 # subgroup size
-num_neg_samples = 93000 # number of negative samples of k = 5 observations
-num_pos_samples = 500 # number of positive samples of k = 5 observations for each OC scenario
+num_neg_samples = 93000 # number of negative samples of k observations
+num_pos_samples = 500 # number of positive samples of k observations for each OC scenario
 
 loc_res = 0 # Mean of the distribution of the residuals
 scale_res = 1 # Standard deviation of the distribution of the residuals
 
 ```
-Then, call the function `dataset_generator` from the `MSPforNN` package to generate the training data set, simulated according to the procedure 
-described in the simulation section of the paper.
+Then, call the function `dataset_generator` from the `MSPforNN` package to generate the data set, simulated according to the procedure 
+described in the simulation section of the paper, and the corresponding vector of classes 0 (negative sample) and 1 (positive sample)
 
 ``` python
 
@@ -92,7 +92,7 @@ Split the simulated data set into 70% training set and 30% validation set.
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.3, stratify = y ,random_state=27)
 
 ```
-Standardize the columns by removing the mean and scaling to unit variance.
+Standardize the features by removing the mean and scaling to unit variance.
 
 ``` python
 
@@ -109,21 +109,24 @@ Set the NN hyperparameters and train the NN with the function `NN_model` from th
 # NN hyperparameters
 
 num_hidden_layer = 1 # Number of hidden layers
-hidden_activation_function = ['relu'] # activation function in the hidden layers
-number_hidden_neuron = [5] # number of neurons in the hidden layers
+hidden_activation_function = ['relu'] # activation function in the hidden layer
+number_hidden_neuron = [5] # number of neurons in the hidden layer
 
-epochs = 10
-batch_size = 256
+epochs = 10 # Number of epochs to train the model. An epoch is an iteration over the entire data set provided
+batch_size = 256 # Number of samples per gradient update
 
-# Trainig 
+# NN Training 
 
 classifier = NN_model(hidden_activation_function = hidden_activation_function,
                    num_hidden_layer = num_hidden_layer, num_hidden_neuron = number_hidden_neuron) 
 
 # Compiling the neural network
-classifier.compile(optimizer ='adam', loss='binary_crossentropy', metrics = ['accuracy'])
+
+classifier.compile(optimizer ='adam', loss='binary_crossentropy', metrics = ['accuracy']) # Configures the model for training
+
 # Fitting 
-history = classifier.fit(X_train, y_train, batch_size = batch_size, epochs = epochs, validation_data=(X_val, y_val))
+
+history = classifier.fit(X_train, y_train, batch_size = batch_size, epochs = epochs, validation_data=(X_val, y_val)) # Trains the model
 
 ```
 
@@ -132,12 +135,12 @@ history = classifier.fit(X_train, y_train, batch_size = batch_size, epochs = epo
 
 ``` python
 
-# Summarize history for accuracy
+# History of training and validation accuracy
 
 plt.plot(history.history['accuracy'])
 plt.plot(history.history['val_accuracy'])
-plt.title('model accuracy')
-plt.ylabel('accuracy')
+plt.title('Model accuracy')
+plt.ylabel('Accuracy')
 plt.xlabel('epoch')
 plt.legend(['train', 'val'], loc='lower right')
 plt.show()
@@ -146,7 +149,7 @@ plt.show()
 
 <img src="README_Figure/model_accuracy.png" height = "60%"  width="60%"/>
 
-Plot the Receiver operating characteristic (ROC) curve and compute the area under the curve (AUC)
+Plot the Receiver Operating Characteristic (ROC) curve and compute the Area Under the Curve (AUC)
 as performance measure to manually tune the typical NN hyperparameters. 
 Use the function `ROC_AUC_plot` from the `MSPforNN` package.
 
