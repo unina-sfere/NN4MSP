@@ -27,8 +27,7 @@ real-case study to monitor the HVAC systems installed on board of passenger rail
 The operational data were acquired and made available by the rail transport company Hitachi 
 Rail S.p.A. based in Italy. This code uses the data from the file `HVAC_data.csv`, which
 contains the HVAC data set analyzed in the paper. 
-Alternatively, one can use another data set that must be
-arranged appropriately as in the next section “Data preparation”.
+Alternatively, one can use another data set and apply this methodology to any multiple stream process.
 
 You can install the development version of the Python package `NNforMSP` from GitHub with:
 
@@ -348,7 +347,7 @@ train_3_data = train_3_data.iloc[0:-3,-6:]
 train_3_data = train_3_data.to_numpy()
 train_3_data_mean = train_3_data.transpose().reshape(-1,k).mean(1).reshape(s,-1).transpose() 
 
-# Plot
+# Plot the ΔT signals from the six train coaches
 
 fig = plt.figure(figsize=(12, 6))
 
