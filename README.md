@@ -271,7 +271,7 @@ train_2_data_mean = train_2_data.transpose().reshape(-1,k).mean(1).reshape(s,-1)
 
 fig = plt.figure(figsize=(12, 6))
 
-x = np.arange(2,32)
+x = np.arange(1,31,1)
 
 plt.plot(x,train_2_data_mean[235:265,0], label = 'Coach 1', color='black', ls='-', marker='*')
 plt.plot(x,train_2_data_mean[235:265,1], label = 'Coach 2', color='blue', ls='-', marker='.')
@@ -283,7 +283,7 @@ plt.xlabel('Subgroup', fontsize=12)
 plt.ylabel('$ \Delta$T', fontsize=12)
 plt.legend(fontsize=10)
 
-plt.xlim([1,30])
+plt.xlim([0,31])
 plt.tick_params(axis='both', which='major', size = 7, width = 1 , direction = 'out', labelsize = 10)
 
 plt.show()
@@ -351,7 +351,7 @@ train_3_data_mean = train_3_data.transpose().reshape(-1,k).mean(1).reshape(s,-1)
 
 fig = plt.figure(figsize=(12, 6))
 
-x = np.arange(2,42,1)
+x = np.arange(1,41,1)
 
 plt.plot(x,train_3_data_mean[15:55,0], label = 'Coach 1', color='black', ls='-', marker='*')
 plt.plot(x,train_3_data_mean[15:55,1], label = 'Coach 2', color='blue', ls='-', marker='.')
@@ -363,7 +363,7 @@ plt.xlabel('Subgroup', fontsize=12)
 plt.ylabel('$ \Delta$T', fontsize=12)
 plt.legend(fontsize=10)
 
-plt.xlim([1,42])
+plt.xlim([0,41])
 plt.tick_params(axis='both', which='major', size = 7, width = 1 , direction = 'out', labelsize = 10)
 
 plt.show()
