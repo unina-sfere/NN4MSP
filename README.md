@@ -70,8 +70,8 @@ Set the simulation parameters to properly generate the data set to train the Nea
 
 s = 6 # number of streams
 k = 5 # subgroup size
-num_neg_samples = 93000 # number of negative samples of k observations
-num_pos_samples = 500 # number of positive samples of k observations for each OC scenario
+num_neg_samples = 55800 # number of negative samples of k observations
+num_pos_samples = 300 # number of positive samples of k observations for each OC scenario
 
 loc_res = 0 # Mean of the distribution of the residuals
 scale_res = 1 # Standard deviation of the distribution of the residuals
@@ -173,7 +173,7 @@ A table of the CVs of the proposed NN corresponding to typical false alarm rate 
 ``` python
 
 set_seed = 0
-cv = 0.9444 # cut-off value
+cv = 0.94 # cut-off value
 n = 100000 # number of samples of 5 observations
 
 alpha = set_cv_alpha(n = n, s = s, k = k, loc_res = loc_res, scale_res = scale_res , scaler = scaler, classifier = classifier, cv = cv, set_seed = set_seed)
