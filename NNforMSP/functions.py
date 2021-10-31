@@ -203,7 +203,7 @@ def control_chart(NN_pred, fig_control_chart, CV, xlabel = "", ylabel = "",
     """        
     
     
-    x = np.arange(1,len(NN_pred),1)
+    x = np.arange(1,len(NN_pred) + 1,1)
 
     plt.plot(x, NN_pred, color='black', ls='-', marker='*')
     plt.axhline(CV, color="red", label = "UCL")
