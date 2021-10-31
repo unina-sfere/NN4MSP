@@ -215,6 +215,7 @@ train_1_data = train_1_data.to_numpy() # Convert pandas dataframe to NumPy array
 train_1_data_mean = train_1_data.transpose().reshape(-1,k).mean(1).reshape(s,-1).transpose() 
 
 ```
+
 Plot the average value of the ΔT signals of all of the coaches of train 1 over 50 subgroup (10 minutes worth of data).
 
 ``` python
