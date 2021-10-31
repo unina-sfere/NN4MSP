@@ -221,7 +221,7 @@ Plot the average value of the ΔT signals of all of the coaches of train 1 over 
 
 fig = plt.figure(figsize=(12, 6))
 
-x = np.arange(2,52,1)
+x = np.arange(1,51,1)
 
 plt.plot(x,train_1_data_mean[210:260,0], label = 'Coach 1', color='black', ls='-', marker='*')
 plt.plot(x,train_1_data_mean[210:260,1], label = 'Coach 2', color='blue', ls='-', marker='.')
@@ -233,7 +233,7 @@ plt.xlabel('Subgroup', fontsize=12)
 plt.ylabel('$ \Delta$T', fontsize=12)
 plt.legend(fontsize=10)
 
-plt.xlim([1,50])
+plt.xlim([0,51])
 plt.tick_params(axis='both', which='major', size = 7, width = 1 , direction = 'out', labelsize = 10)
 
 plt.show()
