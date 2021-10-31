@@ -203,7 +203,7 @@ def control_chart(NN_pred, fig_control_chart, CV, xlabel = "", ylabel = "",
     """        
     
     
-    x = np.arange(2,len(NN_pred) + 2,1)
+    x = np.arange(1,len(NN_pred),1)
 
     plt.plot(x, NN_pred, color='black', ls='-', marker='*')
     plt.axhline(CV, color="red", label = "UCL")
@@ -212,7 +212,8 @@ def control_chart(NN_pred, fig_control_chart, CV, xlabel = "", ylabel = "",
     plt.ylabel(ylabel, fontsize=label_fontsize)
 
     plt.tick_params(axis='both', which='major', size = 7, width = 1 , direction = 'out', labelsize = tick_labelsize)
-
+    plt.xlim([0,len(NN_pred)])
+    
     return fig_control_chart
  
 
