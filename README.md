@@ -173,7 +173,7 @@ A table of the CVs of the proposed NN corresponding to typical false alarm rate 
 ``` python
 
 set_seed = 0
-cv = 0.94 # cut-off value
+cv = 0.940 # cut-off value
 n = 100000 # number of samples of 5 observations
 
 alpha = set_cv_alpha(n = n, s = s, k = k, loc_res = loc_res, scale_res = scale_res , scaler = scaler, classifier = classifier, cv = cv, set_seed = set_seed)
