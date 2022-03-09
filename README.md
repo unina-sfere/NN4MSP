@@ -328,6 +328,31 @@ fig_control_chart = control_chart(NN_pred = train_2_mean_std_pred[235:265], fig_
 
 <img src="README_Figure/PhaseII_train_2_controlchart.png" height = "100%"  width="100%"/>
 
+The time-series plot of the residuals for each coach is displayed to help the practione to identify how many and which stream(s) have shifted.
+
+``` python
+
+fig = plt.figure(figsize=(12, 6))
+
+x = np.arange(1,31,1)
+
+plt.plot(x,train_2_mean_std[235:265,0], label = 'Coach 1', color='black', ls='-', marker='*')
+plt.plot(x,train_2_mean_std[235:265,1], label = 'Coach 2', color='blue', ls='-', marker='.')
+plt.plot(x,train_2_mean_std[235:265,2], label = 'Coach 3', color='red', ls='-.', marker= 's')
+plt.plot(x,train_2_mean_std[235:265,3], label = 'Coach 4', color='green', ls='-', marker='D')
+plt.plot(x,train_2_mean_std[235:265,4], label = 'Coach 5', color='orange', ls='-', marker='+')
+plt.plot(x,train_2_mean_std[235:265,5], label = 'Coach 6', color='violet', ls='-', marker='P')
+plt.xlabel('Subgroup', fontsize=12)
+plt.ylabel('$ X_{tj} $', fontsize=12)
+plt.legend(fontsize=10)
+
+plt.xlim([0,31])
+plt.tick_params(axis='both', which='major', size = 7, width = 1 , direction = 'out', labelsize = 10)
+
+plt.show()
+
+```
+<img src="README_Figure/plot_residuals_PhaseII_train_2.png" height = "100%"  width="100%"/>
 
 #### Train 3 
 
