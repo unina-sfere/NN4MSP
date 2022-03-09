@@ -458,6 +458,8 @@ plt.tick_params(axis='both', which='major', size = 7, width = 1 , direction = 'o
 plt.show()
 
 ```
+<img src="README_Figure/plot_residuals_PhaseII_train_3.png" height = "100%"  width="100%"/>
+
 The above plot shows that coaches 1,2,4,5 of the train 3 perform differently from the other two coaches and helps 
 the practitioner to obtain a correct interpretation of the OC situation.
 
