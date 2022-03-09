@@ -328,7 +328,7 @@ fig_control_chart = control_chart(NN_pred = train_2_mean_std_pred[235:265], fig_
 
 <img src="README_Figure/PhaseII_train_2_controlchart.png" height = "100%"  width="100%"/>
 
-The time-series plot of the residuals for each coach is displayed to help the practione to identify how many and which stream(s) have shifted.
+The time-series plot of the residuals for each coach is displayed to help the practioner to identify how many and which stream(s) have shifted.
 
 ``` python
 
@@ -353,6 +353,9 @@ plt.show()
 
 ```
 <img src="README_Figure/plot_residuals_PhaseII_train_2.png" height = "100%"  width="100%"/>
+
+We can see that the coach 5 residuals are significantly higher than the other residuals, thus the HVAC system installed on-board coach 5 perform badly
+and is not able to meet the required European regulations and ensure passenger thermal comfort.
 
 #### Train 3 
 
@@ -430,3 +433,32 @@ fig_control_chart = control_chart(NN_pred = train_3_mean_std_pred[15:55], fig_co
 ```
 
 <img src="README_Figure/PhaseII_train_3_controlchart.png" height = "100%"  width="100%"/>
+
+We can plot the residuals from each coach of the train 3.
+
+``` python
+
+fig = plt.figure(figsize=(12, 6))
+
+x = np.arange(1,41,1)
+
+plt.plot(x,train_3_mean_std[15:55,0], label = 'Coach 1', color='black', ls='-', marker='*')
+plt.plot(x,train_3_mean_std[15:55,1], label = 'Coach 2', color='blue', ls='-', marker='.')
+plt.plot(x,train_3_mean_std[15:55,2], label = 'Coach 3', color='red', ls='-.', marker= 's')
+plt.plot(x,train_3_mean_std[15:55,3], label = 'Coach 4', color='green', ls='-', marker='D')
+plt.plot(x,train_3_mean_std[15:55,4], label = 'Coach 5', color='orange', ls='-', marker='+')
+plt.plot(x,train_3_mean_std[15:55,5], label = 'Coach 6', color='violet', ls='-', marker='P')
+plt.xlabel('Subgroup', fontsize=12)
+plt.ylabel('$ X_{tj} $', fontsize=12)
+plt.legend(fontsize=10)
+
+plt.xlim([0,41])
+plt.tick_params(axis='both', which='major', size = 7, width = 1 , direction = 'out', labelsize = 10)
+
+plt.show()
+
+```
+The above plot shows that coaches 1,2,4,5 of the train 3 perform differently from the other two coaches and helps 
+the practitioner to obtain a correct interpretation of the OC situation.
+
+
