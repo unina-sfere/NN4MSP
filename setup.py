@@ -1,7 +1,8 @@
 from setuptools import setup, find_packages
 
 VERSION = '1.00' 
-DESCRIPTION = 'Neural network based control charting for multiple stream processes. A Python package from the paper of Lepore, Palumbo, and Sposito, Neural network based control charting for multiple stream processes with an application to HVAC systems in passenger railway vehicles'
+DESCRIPTION = 'Neural network based control charting for multiple stream processes'
+LONG_DESCRIPTION = 'A Python package from the paper of Lepore, Palumbo, and Sposito, Neural network based control charting for multiple stream processes with an application to HVAC systems in passenger railway vehicles'
 
 # Setting up
 
@@ -11,6 +12,7 @@ setup(
         author=['Antonio Lepore', 'Biagio Palumbo', 'Gianluca Sposito'],
         author_email=['antonio.lepore@unina.it', 'biagio.palumbo@unina.it', 'gianluca.sposito@unina.it'],
         description=DESCRIPTION,
+        long_description=LONG_DESCRIPTION,
         url='https://github.com/unina-sfere/NNforMSP',
         license='GNU General Public License v3.0',
         packages=find_packages(),
