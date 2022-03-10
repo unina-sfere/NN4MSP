@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '1.01' 
+VERSION = '1.02' 
 DESCRIPTION = 'Neural network based control charting for multiple stream processes'
 LONG_DESCRIPTION = 'A Python package from the paper of Lepore, Palumbo, and Sposito, Neural network based control charting for multiple stream processes with an application to HVAC systems in passenger railway vehicles'
 
