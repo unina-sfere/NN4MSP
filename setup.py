@@ -19,7 +19,10 @@ setup(
         install_requires=['numpy', 'matplotlib', 'sklearn', 'tensorflow', 'keras'],
         keywords=['Multiple stream process', 'Artificial neural networks', 'Statistical process control', 'Multilayer perceptron', 'Railway HVAC systems'],
         classifiers=[
-            "Intended Audience :: Education, Researchers, Practitioners",
+            "Intended Audience :: Education",
+            "Intended Audience :: Science/Research",
+            "Intended Audience :: Manufacturing",
+            "Intended Audience :: Developers",    
             "Programming Language :: Python :: 3",
             "Operating System :: MacOS :: MacOS X",
             "Operating System :: Microsoft :: Windows",
