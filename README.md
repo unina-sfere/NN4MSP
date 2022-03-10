@@ -38,7 +38,7 @@ pip install git+https://github.com/unina-sfere/NNforMSP#egg=NNforMSP
 You can install the Python package `NNforMSP` using pip
 
 ``` python
-pip install MSP
+pip install NNforMSP
 ```
 
 ``` python
