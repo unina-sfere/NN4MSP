@@ -5,7 +5,7 @@ This repository contains Python code and data of the paper of Lepore, Palumbo an
 “Neural network based control charting for multiple stream processes with an application to 
 HVAC systems in passenger railway vehicles”. Note that this work has been done in the framework 
 of the R&D project of the multiregional investment programme “REINForce:REsearch to INspire the Future” 
-(CDS000609) with Hitachi Rail S.p.A. (https://www.hitachirail.com/), supported by the Italian Ministry 
+(CDS000609) with Hitachi Rail STS. (https://www.hitachirail.com/), supported by the Italian Ministry 
 for Economic Development (MISE) through the Invitalia agency.
 
 This repository contains the following files:
@@ -26,7 +26,7 @@ the proposed methodology used in the paper to the real-case study.
 This tutorial shows how to implement in Python the proposed methodology to the 
 real-case study to monitor the HVAC systems installed on board of passenger railway vehicles. 
 The operational data were acquired and made available by the rail transport company Hitachi 
-Rail S.p.A. based in Italy.
+Rail STS based in Italy.
 HVAC data set contains the data analyzed in the paper and can be loaded by using the function `load_HVAC_data()`. 
 Alternatively, one can use another data set and apply this methodology to any multiple stream process.
 
