@@ -136,9 +136,7 @@ classifier.compile(optimizer ='adam', loss='binary_crossentropy', metrics = ['ac
 history = classifier.fit(X_train, y_train, batch_size = batch_size, epochs = epochs, validation_data=(X_val, y_val)) # Trains the model
 
 ```
-
-<img src="https://github.com/unina-sfere/NN4MSP/blob/main/README_Figure/NN_fitting_history.PNG" height = "100%"  width="100%"/>
-
+![](hhttps://github.com/unina-sfere/NN4MSP/blob/main/README_Figure/NN_fitting_history.PNG)
 
 ``` python
 
