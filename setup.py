@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '2.27' 
+VERSION = '2.28' 
 DESCRIPTION = 'Neural network based control charting for multiple stream processes'
 
 def readme():
