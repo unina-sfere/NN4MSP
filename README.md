@@ -154,7 +154,7 @@ plt.show()
 
 ```
 
-<img src="README_Figure/model_accuracy.png" height = "60%"  width="60%"/>
+<img src="https://github.com/unina-sfere/NN4MSP/blob/main/README_Figure/model_accuracy.png" height = "60%"  width="60%"/>
 
 Plot the Receiver Operating Characteristic (ROC) curve and compute the Area Under the Curve (AUC)
 as performance measure to manually tune the typical NN hyperparameters. 
@@ -168,7 +168,7 @@ f = ROC_AUC_plot(classifier, X_val, y_val, f, xlabel = 'False Positive Rate', yl
 
 ```
 
-<img src="README_Figure/ROC_AUC_plot.png" height = "60%"  width="60%"/>
+<img src="https://github.com/unina-sfere/NN4MSP/blob/main/README_Figure/ROC_AUC_plot.png" height = "60%"  width="60%"/>
 
 ## Set the cut-off value of the neuron in the output layer
 
@@ -247,7 +247,7 @@ plt.show()
 
 ```
 
-<img src="README_Figure/plot_DeltaT_PhaseI_train_1.png" height = "100%"  width="100%"/>
+<img src="https://github.com/unina-sfere/NN4MSP/blob/main/README_Figure/plot_DeltaT_PhaseI_train_1.png" height = "100%"  width="100%"/>
 
 Compute the residuals from each train coach and then calculate the mean and the variance.
 
@@ -297,7 +297,7 @@ plt.show()
 
 ```
 
-<img src="README_Figure/plot_DeltaT_PhaseII_train_2.png" height = "100%"  width="100%"/>
+<img src="https://github.com/unina-sfere/NN4MSP/blob/main/README_Figure/plot_DeltaT_PhaseII_train_2.png" height = "100%"  width="100%"/>
 
 After computing and standardizing the residuals from each coach, the range of the subgroup means of
 the residuals and the overall mean at each sample time are calculated. 
@@ -334,7 +334,7 @@ fig_control_chart = control_chart(NN_pred = train_2_mean_std_pred[235:265], fig_
 
 ```
 
-<img src="README_Figure/PhaseII_train_2_controlchart.png" height = "100%"  width="100%"/>
+<img src="https://github.com/unina-sfere/NN4MSP/blob/main/README_Figure/PhaseII_train_2_controlchart.png" height = "100%"  width="100%"/>
 
 The time-series plot of the residuals for each coach is displayed to help the practioner to identify how many and which stream(s) have shifted.
 
@@ -360,7 +360,7 @@ plt.tick_params(axis='both', which='major', size = 7, width = 1 , direction = 'o
 plt.show()
 
 ```
-<img src="README_Figure/plot_residuals_PhaseII_train_2.png" height = "100%"  width="100%"/>
+<img src="https://github.com/unina-sfere/NN4MSP/blob/main/README_Figure/plot_residuals_PhaseII_train_2.png" height = "100%"  width="100%"/>
 
 We can see that the coach 5 residuals are significantly higher than the other residuals, thus the HVAC system installed on-board coach 5 perform badly
 and is not able to meet the required European regulations and ensure passenger thermal comfort.
@@ -405,7 +405,7 @@ plt.show()
 
 ```
 
-<img src="README_Figure/plot_DeltaT_PhaseII_train_3.png" height = "100%"  width="100%"/>
+<img src="https://github.com/unina-sfere/NN4MSP/blob/main/README_Figure/plot_DeltaT_PhaseII_train_3.png" height = "100%"  width="100%"/>
 
 After computing and standardizing the residuals from each coach, the
 range of the subgroup means of the residuals and the overall mean at each sample time are calculated. 
@@ -440,7 +440,7 @@ fig_control_chart = control_chart(NN_pred = train_3_mean_std_pred[15:55], fig_co
 
 ```
 
-<img src="README_Figure/PhaseII_train_3_controlchart.png" height = "100%"  width="100%"/>
+<img src="https://github.com/unina-sfere/NN4MSP/blob/main/README_Figure/PhaseII_train_3_controlchart.png" height = "100%"  width="100%"/>
 
 We can plot the residuals from each coach of the train 3.
 
@@ -466,7 +466,7 @@ plt.tick_params(axis='both', which='major', size = 7, width = 1 , direction = 'o
 plt.show()
 
 ```
-<img src="README_Figure/plot_residuals_PhaseII_train_3.png" height = "100%"  width="100%"/>
+<img src="https://github.com/unina-sfere/NN4MSP/blob/main/README_Figure/plot_residuals_PhaseII_train_3.png" height = "100%"  width="100%"/>
 
 The above plot shows that coaches 1,2,4,5 of the train 3 perform differently from the other two coaches and helps 
 the practitioner to obtain a correct interpretation of the OC situation.
