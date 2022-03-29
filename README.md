@@ -6,7 +6,7 @@ This repository contains Python code and data of the paper of Lepore, Palumbo an
 HVAC systems in passenger railway vehicles”. Note that this work has been done in the framework 
 of the R&D project of the multiregional investment programme “REINForce:REsearch to INspire the Future” 
 (CDS000609) with Hitachi Rail S.p.A. (https://www.hitachirail.com/), supported by the Italian Ministry 
-for EconomicDevelopment (MISE) through the Invitalia agency.
+for Economic Development (MISE) through the Invitalia agency.
 
 This repository contains the following files:
 
