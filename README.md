@@ -1,4 +1,4 @@
-NNforMSP 
+NN4MSP 
 ================
 
 This repository contains Python code and data of the paper of Lepore, Palumbo and Sposito 
@@ -10,9 +10,10 @@ for EconomicDevelopment (MISE) through the Invitalia agency.
 
 This repository contains the following files:
 
--   HVAC_data.csv contains the HVAC data set
--   NNforMSP/functions.py is the source code of the Python package `NNforMSP` 
--   NNforMSP_tutorial.ipynb is the Jupyter Notebook performing all the analysis shown in
+-   NN4MSP/data contains the HVAC data set
+-   NN4MSP/dataset.py allows the user to access the HVAC data set from the `NN4MSP`package
+-   NN4MSP/functions.py is the source code of the Python package `NN4MSP` 
+-   NN4MSP_tutorial.ipynb is the Jupyter Notebook performing all the analysis shown in
     the Section "*A real-case study*" of the paper
 
 Moreover, in the following Section we provide a tutorial to show how to implement in Python 
