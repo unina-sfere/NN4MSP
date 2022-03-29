@@ -1,8 +1,9 @@
-from importlib import resources
+import pkg_resources
+import pandas as pd
 
-def get_flatland():
+def load_HVAC_data():
+    """Return HVAC data set"""
 
-    with resources.path("NNforMSP.data", "HVAC_data.csv") as f:
-        data_file_path = f
-    return data_file_path
+    stream = pkg_resources.resource_stream(__name__, 'data/HVAC_data.csv')
+    return pd.read_csv(stream, encoding='latin-1')
 
