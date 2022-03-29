@@ -1,19 +1,19 @@
 from setuptools import setup, find_packages
 
-VERSION = '1.05' 
+VERSION = '2.01' 
 DESCRIPTION = 'Neural network based control charting for multiple stream processes'
 LONG_DESCRIPTION = 'A Python package from the paper of Lepore, Palumbo, and Sposito, Neural network based control charting for multiple stream processes with an application to HVAC systems in passenger railway vehicles'
 
 # Setting up
 
 setup(
-        name="NNforMSP", 
+        name="NN4MSP", 
         version=VERSION,
         author='Antonio Lepore, Biagio Palumbo, Gianluca Sposito',
         author_email='antonio.lepore@unina.it, biagio.palumbo@unina.it, gianluca.sposito@unina.it',
         description=DESCRIPTION,
         long_description=LONG_DESCRIPTION,
-        url='https://github.com/unina-sfere/NNforMSP',
+        url='https://github.com/unina-sfere/NN4MSP',
         license='GNU General Public License v3.0',
         packages=find_packages(),
         install_requires=['numpy', 'matplotlib', 'sklearn', 'tensorflow', 'keras'],
