@@ -62,7 +62,8 @@ from matplotlib.ticker import ScalarFormatter, AutoMinorLocator
 from keras import Sequential
 from keras.layers import Dense
 
-from NNforMSP.functions import *
+from NN4MSP.functions import *
+import NN4MSP.dataset
 
 ```
 ## Neural Network training
@@ -196,7 +197,7 @@ measurement errors and validated by domain expert.
 
 ``` python
 
-HVAC_data = pd.read_csv('HVAC_data.csv', parse_dates=['Timestamp'])
+HVAC_data = NN4MSP.dataset.load_HVAC_data()
 
 ```
 ### Phase I 
