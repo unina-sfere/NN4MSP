@@ -1,8 +1,11 @@
 from setuptools import setup, find_packages
 
-VERSION = '2.01' 
+VERSION = '2.27' 
 DESCRIPTION = 'Neural network based control charting for multiple stream processes'
-LONG_DESCRIPTION = 'A Python package from the paper of Lepore, Palumbo, and Sposito, Neural network based control charting for multiple stream processes with an application to HVAC systems in passenger railway vehicles'
+
+def readme():
+    with open('README.md',  encoding="cp437", errors='ignore') as f:
+        return f.read()
 
 # Setting up
 
@@ -12,7 +15,8 @@ setup(
         author='Antonio Lepore, Biagio Palumbo, Gianluca Sposito',
         author_email='antonio.lepore@unina.it, biagio.palumbo@unina.it, gianluca.sposito@unina.it',
         description=DESCRIPTION,
-        long_description=LONG_DESCRIPTION,
+        long_description=readme(),
+        long_description_content_type="text/markdown",
         url='https://github.com/unina-sfere/NN4MSP',
         license='GNU General Public License v3.0',
         packages=find_packages(),
