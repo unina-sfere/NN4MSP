@@ -137,7 +137,7 @@ history = classifier.fit(X_train, y_train, batch_size = batch_size, epochs = epo
 
 ```
 
-<img src="README_Figure/NN_fitting_history.PNG" height = "100%"  width="100%"/>
+<img src="https://github.com/unina-sfere/NN4MSP/blob/main/README_Figure/NN_fitting_history.PNG" height = "100%"  width="100%"/>
 
 
 ``` python
