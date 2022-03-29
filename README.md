@@ -27,7 +27,7 @@ This tutorial shows how to implement in Python the proposed methodology to the
 real-case study to monitor the HVAC systems installed on board of passenger railway vehicles. 
 The operational data were acquired and made available by the rail transport company Hitachi 
 Rail S.p.A. based in Italy.
-HVAC data set contains the HVAC data set analyzed in the paper and can be loaded by using the function `load_HVAC_data()`. 
+HVAC data set contains the data analyzed in the paper and can be loaded by using the function `load_HVAC_data()`. 
 Alternatively, one can use another data set and apply this methodology to any multiple stream process.
 
 You can install the development version of the Python package `NN4MSP` from GitHub with
