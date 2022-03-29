@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '1.03' 
+VERSION = '1.05' 
 DESCRIPTION = 'Neural network based control charting for multiple stream processes'
 LONG_DESCRIPTION = 'A Python package from the paper of Lepore, Palumbo, and Sposito, Neural network based control charting for multiple stream processes with an application to HVAC systems in passenger railway vehicles'
 
@@ -26,7 +26,9 @@ setup(
             "Programming Language :: Python :: 3",
             "Operating System :: MacOS :: MacOS X",
             "Operating System :: Microsoft :: Windows",
-        ]
+        ],
+        include_package_data = True,
+        package_data={'': ['data/*.csv']},
 )
 
 
