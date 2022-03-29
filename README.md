@@ -30,16 +30,16 @@ Rail S.p.A. based in Italy. This code uses the data from the file `HVAC_data.csv
 contains the HVAC data set analyzed in the paper. 
 Alternatively, one can use another data set and apply this methodology to any multiple stream process.
 
-You can install the development version of the Python package `NNforMSP` from GitHub with
+You can install the development version of the Python package `NN4MSP` from GitHub with
 
 ``` python
-pip install git+https://github.com/unina-sfere/NNforMSP#egg=NNforMSP
+pip install git+https://github.com/unina-sfere/NN4MSP#egg=NN4MSP
 ```
 
-You can install the Python package `NNforMSP` using pip
+You can install the Python package `NN4MSP` using pip
 
 ``` python
-pip install NNforMSP
+pip install NN4MSP
 ```
 
 ``` python
